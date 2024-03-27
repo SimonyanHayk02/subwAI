@@ -5,7 +5,7 @@ Script for quickly sorting training images and restoring order in case the origi
 E.g. after changing labels of certain images in image_check.py.
 """
 
-PATH_TO_IMAGES = 'images\\training2'
+PATH_TO_IMAGES = 'images\\training'
 images = []
 labels = []
 done = False

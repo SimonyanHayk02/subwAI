@@ -299,7 +299,7 @@ def load_data():
 
         counts = [0, 0, 0, 0, 0]
 
-        folders = ["down", "up", "left", "right", "noop"]
+        folders = ["down", "up", "left", "right", "noop","down_flipped","up_flipped","left_flipped","right_flipped","noop_flipped"]
 
         min_images = len(os.listdir(os.path.join(PATH_TO_IMAGES, "down"))) * 2
 
@@ -308,7 +308,6 @@ def load_data():
 
             counter = 0
             for image in os.listdir(folder_path):
-                print(image, "image")
                 # for equally sized classes (same amount as down class which has least images
                 if counts[ACTIONS2IDX[folder]] == min_images:
                     print("limit reached")
@@ -323,9 +322,7 @@ def load_data():
                 )
                 images.append(im)
                 labels.append(ACTIONS2IDX[str(folder)])
-                print('1')
 
-        print(counts,'counts')
         
         # for image in images:
         x_data = np.array([np.array(image) for image in images])

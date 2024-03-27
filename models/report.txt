@@ -1,0 +1,72 @@
+Model: "sequential_1"
+____________________________________________________________________________________________________
+ Layer (type)                                Output Shape                            Param #        
+====================================================================================================
+ conv2d (Conv2D)                             (None, 94, 94, 32)                      896            
+                                                                                                    
+ average_pooling2d (AveragePooling2D)        (None, 47, 47, 32)                      0              
+                                                                                                    
+ conv2d_1 (Conv2D)                           (None, 45, 45, 16)                      4624           
+                                                                                                    
+ average_pooling2d_1 (AveragePooling2D)      (None, 22, 22, 16)                      0              
+                                                                                                    
+ flatten (Flatten)                           (None, 7744)                            0              
+                                                                                                    
+ dense (Dense)                               (None, 128)                             991360         
+                                                                                                    
+ dropout (Dropout)                           (None, 128)                             0              
+                                                                                                    
+ dense_1 (Dense)                             (None, 5)                               645            
+                                                                                                    
+====================================================================================================
+Total params: 997,525
+Trainable params: 997,525
+Non-trainable params: 0
+____________________________________________________________________________________________________
+Epochs: 20
+Accuracy: 0.31578946113586426% | Loss: 1.4334288835525513
+
+Layer 0 config: {'name': 'conv2d', 'trainable': True, 'dtype': 'float32', 'batch_input_shape': (None, 96, 96, 3), 'filters': 32, 'kernel_size': (3, 3), 'strides': (1, 1), 'padding': 'valid', 'data_format': 'channels_last', 'dilation_rate': (1, 1), 'groups': 1, 'activation': 'tanh', 'use_bias': True, 'kernel_initializer': {'class_name': 'GlorotUniform', 'config': {'seed': None}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+Layer 1 config: {'name': 'average_pooling2d', 'trainable': True, 'dtype': 'float32', 'pool_size': (2, 2), 'padding': 'valid', 'strides': (2, 2), 'data_format': 'channels_last'}
+Layer 2 config: {'name': 'conv2d_1', 'trainable': True, 'dtype': 'float32', 'filters': 16, 'kernel_size': (3, 3), 'strides': (1, 1), 'padding': 'valid', 'data_format': 'channels_last', 'dilation_rate': (1, 1), 'groups': 1, 'activation': 'tanh', 'use_bias': True, 'kernel_initializer': {'class_name': 'GlorotUniform', 'config': {'seed': None}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+Layer 3 config: {'name': 'average_pooling2d_1', 'trainable': True, 'dtype': 'float32', 'pool_size': (2, 2), 'padding': 'valid', 'strides': (2, 2), 'data_format': 'channels_last'}
+Layer 4 config: {'name': 'flatten', 'trainable': True, 'dtype': 'float32', 'data_format': 'channels_last'}
+Layer 5 config: {'name': 'dense', 'trainable': True, 'dtype': 'float32', 'units': 128, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'GlorotUniform', 'config': {'seed': None}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+Layer 6 config: {'name': 'dropout', 'trainable': True, 'dtype': 'float32', 'rate': 0.3, 'noise_shape': None, 'seed': None}
+
+Model: "sequential_1"
+____________________________________________________________________________________________________
+ Layer (type)                                Output Shape                            Param #        
+====================================================================================================
+ conv2d (Conv2D)                             (None, 94, 94, 32)                      896            
+                                                                                                    
+ average_pooling2d (AveragePooling2D)        (None, 47, 47, 32)                      0              
+                                                                                                    
+ conv2d_1 (Conv2D)                           (None, 45, 45, 16)                      4624           
+                                                                                                    
+ average_pooling2d_1 (AveragePooling2D)      (None, 22, 22, 16)                      0              
+                                                                                                    
+ flatten (Flatten)                           (None, 7744)                            0              
+                                                                                                    
+ dense (Dense)                               (None, 128)                             991360         
+                                                                                                    
+ dropout (Dropout)                           (None, 128)                             0              
+                                                                                                    
+ dense_1 (Dense)                             (None, 5)                               645            
+                                                                                                    
+====================================================================================================
+Total params: 997,525
+Trainable params: 997,525
+Non-trainable params: 0
+____________________________________________________________________________________________________
+Epochs: 20
+Accuracy: 0.5873016119003296% | Loss: 0.9457438588142395
+
+Layer 0 config: {'name': 'conv2d', 'trainable': True, 'dtype': 'float32', 'batch_input_shape': (None, 96, 96, 3), 'filters': 32, 'kernel_size': (3, 3), 'strides': (1, 1), 'padding': 'valid', 'data_format': 'channels_last', 'dilation_rate': (1, 1), 'groups': 1, 'activation': 'tanh', 'use_bias': True, 'kernel_initializer': {'class_name': 'GlorotUniform', 'config': {'seed': None}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+Layer 1 config: {'name': 'average_pooling2d', 'trainable': True, 'dtype': 'float32', 'pool_size': (2, 2), 'padding': 'valid', 'strides': (2, 2), 'data_format': 'channels_last'}
+Layer 2 config: {'name': 'conv2d_1', 'trainable': True, 'dtype': 'float32', 'filters': 16, 'kernel_size': (3, 3), 'strides': (1, 1), 'padding': 'valid', 'data_format': 'channels_last', 'dilation_rate': (1, 1), 'groups': 1, 'activation': 'tanh', 'use_bias': True, 'kernel_initializer': {'class_name': 'GlorotUniform', 'config': {'seed': None}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+Layer 3 config: {'name': 'average_pooling2d_1', 'trainable': True, 'dtype': 'float32', 'pool_size': (2, 2), 'padding': 'valid', 'strides': (2, 2), 'data_format': 'channels_last'}
+Layer 4 config: {'name': 'flatten', 'trainable': True, 'dtype': 'float32', 'data_format': 'channels_last'}
+Layer 5 config: {'name': 'dense', 'trainable': True, 'dtype': 'float32', 'units': 128, 'activation': 'relu', 'use_bias': True, 'kernel_initializer': {'class_name': 'GlorotUniform', 'config': {'seed': None}}, 'bias_initializer': {'class_name': 'Zeros', 'config': {}}, 'kernel_regularizer': None, 'bias_regularizer': None, 'activity_regularizer': None, 'kernel_constraint': None, 'bias_constraint': None}
+Layer 6 config: {'name': 'dropout', 'trainable': True, 'dtype': 'float32', 'rate': 0.3, 'noise_shape': None, 'seed': None}
+
