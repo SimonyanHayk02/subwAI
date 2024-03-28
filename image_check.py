@@ -47,8 +47,9 @@ for i, folder in enumerate(os.listdir(PATH_TO_IMAGES)):
     if folder not in check:
         continue
     for j, image in enumerate(copy.deepcopy(images)):
-        if j == 1:
-            break
+        print(f"i: {i}\nj: {j}\nimage:{image}\n")
+        # if j == 1:
+        #     break
         im = cv2.imread(os.path.join(folder_path, image))
         im_small = cv2.resize(im, (96, 96), interpolation=cv2.INTER_AREA)
         im_small = tf.keras.preprocessing.image.img_to_array(im_small)[
@@ -59,7 +60,7 @@ for i, folder in enumerate(os.listdir(PATH_TO_IMAGES)):
         prediction = actions[np.argmax(predictions)]
         certainty = round(np.amax(predictions) * 100, 2)
         while True:
-            print(i, "iiiiiiiiiiii")
+            # print(i, "iiiiiiiiiiii")
             f = keys[i]
             cv2.putText(
                 im,
@@ -112,34 +113,38 @@ for i, folder in enumerate(os.listdir(PATH_TO_IMAGES)):
             elif k == w and k != f:
                 print("move image up")
                 path = os.path.join(PATH_TO_IMAGES, "up")
+                print(str(len(os.listdir(path)) + 100))                
                 os.rename(
                     os.path.join(folder_path, image),
-                    os.path.join(path, str(len(os.listdir(path)) + 2) + ".png"),
+                    os.path.join(path, str(len(os.listdir(path)) + 1000) + ".png"),
                 )
                 break
             elif k == a and k != f:
                 print("move image to left")
                 path = os.path.join(PATH_TO_IMAGES, "left")
+                print(str(len(os.listdir(path)) + 2))                
                 os.rename(
                     os.path.join(folder_path, image),
-                    os.path.join(path, str(len(os.listdir(path)) + 2) + ".png"),
+                    os.path.join(path, str(len(os.listdir(path)) + 1000) + ".png"),
                 )
                 break
             elif k == s and k != f:
                 print("move image to down")
                 path = os.path.join(PATH_TO_IMAGES, "down")
+                print( os.path.join(path, str(len(os.listdir(path)) + 1000) + ".png"))
                 os.rename(
                     os.path.join(folder_path, image),
-                    os.path.join(path, str(len(os.listdir(path)) + 2) + ".png"),
+                    os.path.join(path, str(len(os.listdir(path)) + 1000) + ".png"),
                 )
                 break
             elif k == d and k != f:
                 path = os.path.join(PATH_TO_IMAGES, "right")
                 os.rename(
                     os.path.join(folder_path, image),
-                    os.path.join(path, str(len(os.listdir(path)) + 2) + ".png"),
+                    os.path.join(path, str(len(os.listdir(path)) + 1000) + ".png"),
                 )
                 print("move image to right")
+                print(str(len(os.listdir(path)) + 1000))                
                 break
             elif k == -1:
                 continue

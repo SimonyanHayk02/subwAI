@@ -23,7 +23,7 @@ else:
 NUM_CATEGORIES = 5
 TEST_SIZE = 0.3
 
-PATH_TO_IMAGES = "C:\\Users\\user\\Desktop\\subwAI\\images\\training"
+PATH_TO_IMAGES = "images/training"
 ACTIONS2IDX = {
     "left": 0,
     "right": 1,
@@ -188,10 +188,10 @@ def let_ai_play():
     Loads saved model and starts playing loop with model making predictions for individual frames.
     """
     game = Game()
-    game.disable_wifi()
+    # game.disable_wifi()
     # [KNeighborsClassifier(n_neighbors=5), tf.keras.models.Sequential(), GaussianNB(), Perceptron()]
     model = tf.keras.models.Sequential()
-    path = os.path.join("models", type(model).__name__ + "_whole_set")
+    path = os.path.join("models", type(model).__name__)
 
     if type(model).__name__ == "Sequential":
         game.NN = True
